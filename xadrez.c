@@ -1,32 +1,56 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int movimentoTorre, movimentoBispo, movimentoRainha;
+    int i, j, k;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // -------------------------------
+    // Entrada de dados
+    // -------------------------------
+    printf("=== Simulador de Movimentos de Xadrez ===\n\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("Digite quantas casas a TORRE deve andar para a direita: ");
+    scanf("%d", &movimentoTorre);
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("Digite quantas casas o BISPO deve andar na diagonal (cima e direita): ");
+    scanf("%d", &movimentoBispo);
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Digite quantas casas a RAINHA deve andar para a esquerda: ");
+    scanf("%d", &movimentoRainha);
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    printf("\n");
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // -------------------------------
+    // Movimento da TORRE (for)
+    // -------------------------------
+    printf("=== Movimento da TORRE ===\n");
+    for (i = 1; i <= movimentoTorre; i++) {
+        printf("Direita (%d)\n", i);
+    }
+    printf("\n");
+
+    // -------------------------------
+    // Movimento do BISPO (while)
+    // -------------------------------
+    printf("=== Movimento do BISPO ===\n");
+    j = 1;
+    while (j <= movimentoBispo) {
+        printf("Cima, Direita (%d)\n", j);
+        j++;
+    }
+    printf("\n");
+
+    // -------------------------------
+    // Movimento da RAINHA (do-while)
+    // -------------------------------
+    printf("=== Movimento da RAINHA ===\n");
+    k = 1;
+    do {
+        printf("Esquerda (%d)\n", k);
+        k++;
+    } while (k <= movimentoRainha);
+
+    printf("\n=== Fim da simulação de movimentos ===\n");
 
     return 0;
 }
